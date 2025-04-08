@@ -38,7 +38,7 @@ body {
 
 .crack-1 { top: 10%; left: 20%; width: 150px; transform: rotate(45deg); }
 .crack-2 { top: 50%; left: 60%; width: 200px; transform: rotate(-30deg); }
-.crack-3 { top: 70%; left: 10%; width: 180px dürfen: rotate(90deg); }
+.crack-3 { top: 70%; left: 10%; width: 180px; transform: rotate(90deg); }
 
 .container {
     width: 100%;
@@ -52,6 +52,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh; /* Для вертикального центрирования */
+    margin: 0 auto; /* Усиленное центрирование */
 }
 
 .button-grid {
@@ -70,6 +71,7 @@ body {
     border: 3px solid #3a5fb3;
     box-shadow: 0 0 15px rgba(58, 95, 179, 0.5);
     margin: 0 auto; /* Центрирование внутри контейнера */
+    box-sizing: border-box; /* Учитываем padding и border в размерах */
 }
 
 .button-grid.loading::before {
@@ -123,7 +125,8 @@ body {
     left: 50%;
     width: 0;
     height: 0;
-    background: url('assets/star.png') no-repeat center/contain;
+    background: url('assets/star.png') no-repeat center;
+    background-size: contain;
     transform: translate(-50%, -50%);
     opacity: 0;
 }
@@ -135,7 +138,7 @@ body {
 
 @keyframes growStar {
     0% { width: 0; height: 0; }
-    100% { width: 100%; height: 100%; } /* Звезда занимает всю ячейку */
+    100% { width: 54px; height: 54px; } /* Размер ячейки с учетом gap */
 }
 
 .user-info {
@@ -146,6 +149,8 @@ body {
     text-align: center;
     font-size: 16px;
     width: 300px;
+    margin-left: auto;
+    margin-right: auto; /* Усиленное центрирование */
 }
 
 .bomb-label {
@@ -164,6 +169,8 @@ body {
     border-radius: 15px;
     width: 300px;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto; /* Усиленное центрирование */
 }
 
 .bomb-controls {

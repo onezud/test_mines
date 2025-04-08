@@ -36,26 +36,9 @@ body {
     z-index: 0;
 }
 
-.crack-1 {
-    top: 10%;
-    left: 20%;
-    width: 150px;
-    transform: rotate(45deg);
-}
-
-.crack-2 {
-    top: 50%;
-    left: 60%;
-    width: 200px;
-    transform: rotate(-30deg);
-}
-
-.crack-3 {
-    top: 70%;
-    left: 10%;
-    width: 180px;
-    transform: rotate(90deg);
-}
+.crack-1 { top: 10%; left: 20%; width: 150px; transform: rotate(45deg); }
+.crack-2 { top: 50%; left: 60%; width: 200px; transform: rotate(-30deg); }
+.crack-3 { top: 70%; left: 10%; width: 180px; transform: rotate(90deg); }
 
 .container {
     width: 100%;
@@ -69,56 +52,37 @@ body {
 .button-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    margin-bottom: 25px;
-    width: 300px; /* Строго квадратное поле */
-    height: 300px; /* Строго квадратное поле */
-    background: #0a1a3d; /* Монотонный темно-синий фон */
-    padding: 10px;
-    border-radius: 15px;
+    gap: 10px;
+    margin: 0 auto 25px;
+    width: 320px; /* Увеличил для симметрии и отступов */
+    height: 320px;
+    /* Цвет заднего фона ячеек */
+    background: #1e2a44; /* Спокойный темно-синий */
+    padding: 15px; /* Одинаковые внутренние отступы */
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-}
-
-.button-grid::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #3a5fb3, #0f8ae4, #3a5fb3);
-    background-size: 200% 200%;
-    animation: borderGlow 3s linear infinite;
-    border-radius: 15px;
-    z-index: -1;
-}
-
-@keyframes borderGlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    /* Рамка с закруглениями */
+    border: 3px solid #3a5fb3;
+    box-shadow: 0 0 15px rgba(58, 95, 179, 0.5);
 }
 
 .button-grid.loading::after {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -100%;
+    width: 20%; /* Узкая линия блика */
     height: 100%;
-    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.5) 50%, transparent 60%);
-    background-size: 200% 200%;
-    animation: shimmer 1.5s linear infinite;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: scan 1.5s ease-in-out infinite; /* Плавная анимация сканера */
 }
 
-@keyframes shimmer {
-    0% { background-position: -200% -200%; }
-    100% { background-position: 200% 200%; }
+@keyframes scan {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 @keyframes fadeIn {
@@ -127,40 +91,41 @@ body {
 }
 
 .button {
-    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    /* Цвет ячеек */
+    background: linear-gradient(135deg, #2a3f7a, #1e2a44);
     border: 1px solid #3a5fb3;
-    border-radius: 8px;
-    width: 100%; /* Квадратные ячейки */
-    padding-top: 100%; /* Соотношение 1:1 для квадрата */
+    border-radius: 10px;
+    width: 100%;
+    padding-top: 100%;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
 }
 
 .button.safe {
-    background: #f7d02c;
+    /* Цвет открытых ячеек */
+    background: linear-gradient(135deg, #ffd700, #f7d02c);
     border: 1px solid #e6b800;
-    animation: shrinkAndGrow 0.6s ease forwards;
+    animation: openCell 0.6s ease forwards;
 }
 
-@keyframes shrinkAndGrow {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(0.1); opacity: 0; }
-    51% { transform: scale(0.1); opacity: 0; }
+@keyframes openCell {
+    0% { transform: scale(0.95); opacity: 0.8; }
     100% { transform: scale(1); opacity: 1; }
 }
 
 .button::after {
+    /* Цвет звёздочек */
     content: "★";
-    font-size: 28px;
+    font-size: 24px;
     color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
 .button.safe::after {
@@ -168,9 +133,9 @@ body {
 }
 
 .user-info {
-    margin-bottom: 13px;
+    margin-bottom: 15px;
     padding: 16px;
-    background-color: rgba(20, 27, 47, 0.8);
+    background-color: rgba(20, 27, 47, 0.85);
     border-radius: 15px;
     text-align: center;
     font-size: 16px;
@@ -185,9 +150,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 13px;
-    background-color: rgba(20, 27, 47, 0.8);
+    gap: 12px;
+    margin-bottom: 15px;
+    background-color: rgba(20, 27, 47, 0.85);
     padding: 20px;
     border-radius: 15px;
     width: 100%;
@@ -201,14 +166,13 @@ body {
     width: 100%;
     background-color: #0a0d2d;
     padding: 10px;
-    border-radius: 9px;
-    box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .minus, .plus {
     background-color: #1e3c72;
     border: none;
-    border-radius: 9px;
+    border-radius: 10px;
     width: 40px;
     height: 40px;
     color: white;
@@ -225,26 +189,24 @@ body {
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
-    text-align: center;
 }
 
 .signal-button {
     width: 100%;
     background: linear-gradient(90deg, #0f8ae4, #0855c2);
     border: none;
-    border-radius: 9px;
-    padding: 13px;
+    border-radius: 10px;
+    padding: 14px;
     font-size: 18px;
     color: white;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, opacity 0.2s;
-    box-sizing: border-box;
 }
 
 .signal-button:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.03);
+    opacity: 0.95;
 }
 
 .signal-button:disabled {

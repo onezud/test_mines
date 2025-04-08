@@ -3,22 +3,24 @@ const translations = {
     "ru": {
         bombLabel: "Введите количество ловушек",
         signalButton: "Получить сигнал",
+        newGameButton: "Новая игра",
         loadingText: "Получение информации..."
     },
     "en": {
         bombLabel: "Enter the number of traps",
         signalButton: "Get Signal",
+        newGameButton: "New Game",
         loadingText: "Retrieving information..."
     }
 };
 
 // Функция для установки языка
 function setLanguage() {
-    const userLang = Telegram.WebApp.initDataUnsafe.user?.language_code || "en"; // По умолчанию английский
-    const lang = translations[userLang] ? userLang : "en"; // Если язык не поддерживается, используем английский
+    const userLang = Telegram.WebApp.initDataUnsafe.user?.language_code || "en";
+    const lang = translations[userLang] ? userLang : "en";
     document.querySelector('.bomb-label').textContent = translations[lang].bombLabel;
     document.querySelector('.signal-button').textContent = translations[lang].signalButton;
-    return translations[lang]; // Возвращаем текущий язык для использования в других местах
+    return translations[lang];
 }
 
 // Инициализация Telegram Web App и установка языка
@@ -26,6 +28,7 @@ Telegram.WebApp.ready();
 const currentLang = setLanguage();
 
 let bombCount = 1;
+let isNewGame = false;
 
 document.querySelector('.minus').addEventListener('click', () => {
     if (bombCount > 1) {
@@ -47,6 +50,22 @@ function updateBombDisplay() {
 
 document.querySelector('.signal-button').addEventListener('click', () => {
     const signalButton = document.querySelector('.signal-button');
+    const buttonGrid = document.querySelector('.button-grid');
+
+    if (isNewGame) {
+        // Очистка поля для новой игры
+        const buttons = Array.from(document.querySelectorAll('.button'));
+        buttons.forEach(button => {
+            button.classList.remove('bomb', 'safe');
+        });
+        signalButton.textContent = currentLang.signalButton;
+        buttonGrid.classList.remove('loading');
+        isNewGame = false;
+        return;
+    }
+
+    // Запуск анимации ожидания
+    buttonGrid.classList.add('loading');
     signalButton.textContent = currentLang.loadingText;
     signalButton.disabled = true;
 
@@ -58,6 +77,9 @@ document.querySelector('.signal-button').addEventListener('click', () => {
 
 function placeSafeCells(count) {
     const buttons = Array.from(document.querySelectorAll('.button'));
+    const buttonGrid = document.querySelector('.button-grid');
+    buttonGrid.classList.remove('loading');
+
     const totalButtons = buttons.length;
 
     buttons.forEach(button => {
@@ -77,8 +99,9 @@ function placeSafeCells(count) {
             buttons[index].classList.add('safe');
             if (i === safeCellsToShow.length - 1) {
                 const signalButton = document.querySelector('.signal-button');
-                signalButton.textContent = currentLang.signalButton;
+                signalButton.textContent = currentLang.newGameButton;
                 signalButton.disabled = false;
+                isNewGame = true;
             }
         }, i * 200);
     });

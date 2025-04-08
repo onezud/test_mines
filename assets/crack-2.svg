@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Keyshape -->
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="201" viewBox="0 0 68 201" fill="none" style="background: rgba(69,69,74,0.00);">
+    <style>
+@keyframes flex-4_t { 0% { transform: scale(1,1) translate(-12.5px,-12.5px); } 100% { transform: scale(1,1) translate(-12.5px,-12.5px); } }
+@keyframes flex-4_mo { 0% { offset-distance: 0%; } 86.6667% { offset-distance: 86.749%; } 100% { offset-distance: 100%; } }
+@keyframes a0_t { 0% { transform: translate(12.5px,12.5px) scale(1,1); animation-timing-function: cubic-bezier(0.42,0,0.58,1); } 50% { transform: translate(12.5px,12.5px) scale(0.9,0.9); animation-timing-function: cubic-bezier(0.42,0,0.58,1); } 100% { transform: translate(12.5px,12.5px) scale(1,1); } }
+@keyframes a1_o { 0% { opacity: 0.8; } 50% { opacity: 1; } 100% { opacity: 0.8; } }
+@keyframes flex-3_mo { 0% { offset-distance: 0%; } 80% { offset-distance: 74.58%; } 100% { offset-distance: 100%; } }
+@keyframes flex-2_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 49.938%; } 100% { offset-distance: 100%; } }
+@keyframes flex-1_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 48.977%; } 100% { offset-distance: 100%; } }
+@keyframes a2_f { 0% { fill: #16A7E6; } 63.3333% { fill: #b9ddff; } 100% { fill: #16A7E6; } }
+@keyframes a3_f { 0% { fill: #E4F7FF; } 63.3333% { fill: #ffffff; } 100% { fill: #E4F7FF; } }
+@keyframes a4_f { 0% { fill: #9AEDFB; } 63.3333% { fill: #d0dcff; } 100% { fill: #9AEDFB; } }
+@keyframes a5_f { 0% { fill: #48D1E9; } 63.3333% { fill: #d0f3ff; } 100% { fill: #48D1E9; } }
+    </style>
+    <g id="crak" filter="none" transform="translate(28.5,96.25) translate(-28.5,-96.25)">
+        <path d="M6,69.5L20,0L20,54L24.5,73L51,87L37.5,109L10,192.5L24.5,97.5L6,69.5Z" fill="#212d4b" transform="translate(29.5,97.25) translate(-28.5,-96.25)"/>
+        <path d="M6,69.5L20,0L20,54L24.5,73L51,87L37.5,109L10,192.5L24.5,97.5L6,69.5Z" fill="#0A0F1D" transform="translate(28.5,96.25) translate(-28.5,-96.25)"/>
+    </g>
+    <g id="flex-4" style="transform: translate(-12.5px,-12.5px); animation: 3s linear infinite both flex-4_t, 3s linear infinite both flex-4_mo; offset-path: path('M49.5259,67.5214C51.5,65,46.5,65.5,48.8122,67.5979C49.0061,67.7519,49.2494,67.7043,49.5259,67.5214'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-0)" rx="12.5" ry="12.5" transform="translate(12.5,12.5)" style="animation: 3s linear infinite both a0_t;"/>
+        <ellipse fill="#ACF1FE" rx="2.5" ry="2.5" opacity="0.8" transform="translate(12.5,12.5)" style="animation: 3s linear infinite both a1_o;"/>
+    </g>
+    <g id="flex-3" style="transform: translate(-3px,-3px); animation: 3s linear infinite both flex-3_mo; offset-path: path('M19,101C19.5,100.5,22,97.5,18.5638,100.5C17.497,101.489,18.9187,101.294,19,101'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-1)" rx="3" ry="3" transform="translate(3,3)"/>
+        <ellipse fill="#9AEDFB" rx="1" ry="1" transform="translate(3,2.5)"/>
+    </g>
+    <g id="flex-2" style="transform: translate(-3.5px,-3.5px); animation: 3s linear infinite both flex-2_mo; offset-path: path('M19.5,30.5C18.0954,32.9846,18.623,35.2611,19.5,37.5C20.6018,35.091,20.7772,32.7457,19.5,30.5'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-2)" rx="3.5" ry="3.5" transform="translate(3.5,3.5)"/>
+        <ellipse fill="#9AEDFB" rx="0.5" ry="0.5" transform="translate(3.5,3.5)"/>
+    </g>
+    <ellipse id="flex-1" fill="#71EAEC" rx="0.5" ry="0.5" style="animation: 3s linear infinite both flex-1_mo; offset-path: path('M37.5,155.5C35.5556,152.688,35.8486,150.427,37.5,148.5C39.6123,150.673,39.7612,152.995,37.5,155.5'); offset-rotate: 0deg;"/>
+    <g opacity="0.9" transform="translate(32.4353,89.3044) translate(-32.4353,-89.3044)">
+        <path d="M29.641,95.0175L36.8487,95.0175L33.7104,90.9625L29.641,95.0175Z" fill="#16A7E6" transform="translate(33.2448,92.99) translate(-33.2448,-92.99)" style="animation: 3s linear infinite both a2_f;"/>
+        <path d="M22.332,81.1359L26.7366,89.9165L29.641,95.0175L33.7104,90.9625C33.7845,88.3469,25.583,81.9957,22.332,81.1359Z" fill="#ACF1FE" transform="translate(28.0214,88.0767) translate(-28.0214,-88.0767)"/>
+        <path d="M33.7104,90.9625L33.7104,84.1453L22.332,81.1359C25.583,81.9957,33.7845,88.3469,33.7104,90.9625Z" fill="#E4F7FF" transform="translate(28.0214,86.0492) translate(-28.0214,-86.0492)" style="animation: 3s linear infinite both a3_f;"/>
+        <path d="M42.5386,88.4446L33.7104,84.1453L33.7104,90.9625C34.3776,87.9702,40.3457,87.9497,42.5386,88.4446Z" fill="#9AEDFB" transform="translate(38.1245,87.5539) translate(-38.1245,-87.5539)" style="animation: 3s linear infinite both a4_f;"/>
+        <path d="M33.7104,90.9625L36.8487,95.0175L42.5386,88.4446C40.3457,87.9497,34.3776,87.9702,33.7104,90.9625Z" fill="#48D1E9" transform="translate(38.1245,91.6107) translate(-38.1245,-91.6107)" style="animation: 3s linear infinite both a5_f;"/>
+        <path d="M37.8094,97.4729L39.0992,94.4635L40.8189,92.7438L42.5386,88.4446L36.8487,95.0175L37.8094,97.4729Z" fill="#16A7E8" transform="translate(39.6937,92.9588) translate(-39.6937,-92.9588)"/>
+        <path d="M29.641,95.0175L37.8094,97.4729L36.8487,95.0175L29.641,95.0175Z" fill="#015DBF" transform="translate(33.7252,96.2452) translate(-33.7252,-96.2452)"/>
+    </g>
+    <defs>
+        <filter id="filter0_di_308_7836" x="2" y="0" width="53" height="200.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.0823529 0 0 0 0 0.105882 0 0 0 0 0.172549 0 0 0 1 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_308_7836"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_308_7836" result="shape"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="shape" result="effect2_innerShadow_308_7836"/>
+        </filter>
+        <radialGradient id="Gradient-0" cx="-5.4" cy="3.96" r="1" fx="-5.4" fy="3.96" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 12.5 -12.5 0 49.5 67.5)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="Gradient-1" cx="-33.6667" cy="6.33333" r="1" fx="-33.6667" fy="6.33333" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 3 -3 0 19 101)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="Gradient-2" cx="-8.71429" cy="5.57143" r="1" fx="-8.71429" fy="5.57143" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 3.5 -3.5 0 19.5 30.5)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+</svg>

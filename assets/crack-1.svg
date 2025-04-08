@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Keyshape -->
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="132" viewBox="0 0 85 132" fill="none" style="background: rgba(51,51,51,0.00);">
+    <style>
+@keyframes flex-4_t { 0% { transform: scale(1,1) translate(-12.5px,-12.5px); } 50% { transform: scale(0.9,0.9) translate(-12.5px,-12.5px); } 100% { transform: scale(1,1) translate(-12.5px,-12.5px); } }
+@keyframes flex-4_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 48.756%; } 100% { offset-distance: 100%; } }
+@keyframes flex-3_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 49.928%; } 100% { offset-distance: 100%; } }
+@keyframes flex-2_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 49.825%; } 100% { offset-distance: 100%; } }
+@keyframes flex-1_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 50%; } 100% { offset-distance: 100%; } }
+@keyframes a0_f { 0% { fill: #16A7E6; } 50% { fill: #adddff; } 100% { fill: #16A7E6; } }
+@keyframes a1_f { 0% { fill: #ACF1FE; } 50% { fill: #ffffff; } 100% { fill: #ACF1FE; } }
+@keyframes a2_f { 0% { fill: #48D1E9; } 50% { fill: #ccf4ff; } 100% { fill: #48D1E9; } }
+    </style>
+    <g filter="none" transform="translate(42.25,64.5) translate(-42.25,-64.5)">
+        <path d="M33,69.5L33,82L50,100L26.5,124L43,100L30,86.5L26.5,64.5L20,61L4,56.5L20,56.5L23.5,55.5L25,54.5L23.5,50.5L29.5,43L39.5,42L60,23.5L64.5,5L80.5,5L69,10L64.5,23.5L45.5,43L45.5,47.5L46.5,60.5L41,64.5L33,63.5L29,62L33,69.5Z" fill="#212d4b" transform="translate(43.25,65.5) translate(-42.25,-64.5)"/>
+        <path d="M33,69.5L33,82L50,100L26.5,124L43,100L30,86.5L26.5,64.5L20,61L4,56.5L20,56.5L23.5,55.5L25,54.5L23.5,50.5L29.5,43L39.5,42L60,23.5L64.5,5L80.5,5L69,10L64.5,23.5L45.5,43L45.5,47.5L46.5,60.5L41,64.5L33,63.5L29,62L33,69.5Z" fill="#0A0F1D" transform="translate(42.25,64.5) translate(-42.25,-64.5)"/>
+    </g>
+    <g id="flex-4" style="transform: translate(-12.5px,-12.5px); animation: 3s linear infinite both flex-4_t, 3s linear infinite both flex-4_mo; offset-path: path('M56.5,34.5C54,34,54.5,30.5,56.5,30.5C58.5,30.5,59.5,34,56.5,34.5'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-0)" rx="12.5" ry="12.5" transform="translate(12.5,12.5)"/>
+        <ellipse fill="#48D1E9" rx="2.5" ry="2.5" transform="translate(12.5,12.5)"/>
+    </g>
+    <ellipse id="flex-3" fill="#71EAEC" rx="0.5" ry="0.5" style="animation: 3s linear infinite both flex-3_mo; offset-path: path('M48.5,113.5C47.822,112.064,47.9152,110.744,48.5,109.5C49.17,110.809,49.1604,112.143,48.5,113.5'); offset-rotate: 0deg;"/>
+    <g id="flex-2" style="transform: translate(-3.5px,-3.5px); animation: 3s linear infinite both flex-2_mo; offset-path: path('M17.5,12.5C16.0006,14.6967,16.5973,17.0844,17.5,19.5C18.5278,17.2527,19.1327,14.97,17.5,12.5'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-1)" rx="3.5" ry="3.5" transform="translate(3.5,3.5)"/>
+        <ellipse fill="#ACF1FE" rx="0.5" ry="0.5" transform="translate(3.5,3.5)"/>
+    </g>
+    <g id="flex-1" style="transform: translate(-3px,-3px); animation: 3s linear infinite both flex-1_mo; offset-path: path('M13,78C14,76.5,12.5,75,11,76C10,77.5,11.5,79,13,78'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-2)" rx="3" ry="3" transform="translate(3,3)"/>
+        <ellipse fill="#ACF1FE" rx="1" ry="1" transform="translate(3,3)"/>
+    </g>
+    <g opacity="0.9" transform="translate(35.3458,53.6868) translate(-35.3458,-53.6868)">
+        <path d="M30.5979,57.9048L39.9012,57.9048L36.6213,53.6668L30.5979,57.9048Z" fill="#16A7E6" transform="translate(35.2495,55.7858) translate(-35.2495,-55.7858)" style="animation: 3s linear infinite both a0_f;"/>
+        <path d="M31.1549,48.9292L29.3328,52.5736L30.5979,57.9048L36.6213,53.6668C36.6987,50.9332,33.4272,47.9976,31.1549,48.9292Z" fill="#ACF1FE" transform="translate(32.9777,53.3289) translate(-32.9777,-53.3289)" style="animation: 3s linear infinite both a1_f;"/>
+        <path d="M36.6213,53.6668L34.7669,47.5978L31.1549,48.9292C33.4272,47.9976,36.6987,50.9332,36.6213,53.6668Z" fill="#E4F7FF" transform="translate(33.8888,50.6323) translate(-33.8888,-50.6323)"/>
+        <path d="M40.6301,50.387L34.7669,47.5978L36.6213,53.6668C37.3186,50.5395,38.3382,49.8698,40.6301,50.387Z" fill="#9AEDFB" transform="translate(37.6985,50.6323) translate(-37.6985,-50.6323)"/>
+        <path d="M36.6213,53.6668L39.9012,57.9048L40.6301,50.387C38.3382,49.8698,37.3186,50.5395,36.6213,53.6668Z" fill="#48D1E9" transform="translate(38.6257,54.067) translate(-38.6257,-54.067)" style="animation: 3s linear infinite both a2_f;"/>
+        <path d="M38.9404,59.7757L41.3589,57.9048L40.9945,53.6668L40.6301,50.387L39.9012,57.9048L38.9404,59.7757Z" fill="#16A7E8" transform="translate(40.1496,55.0814) translate(-40.1496,-55.0814)"/>
+        <path d="M30.5979,57.9048L38.9404,59.7757L39.9012,57.9048L30.5979,57.9048Z" fill="#015DBF" transform="translate(35.2495,58.8402) translate(-35.2495,-58.8402)"/>
+    </g>
+    <defs>
+        <filter id="filter0_di_308_7835" x="0" y="5" width="84.5" height="127" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.0823529 0 0 0 0 0.105882 0 0 0 0 0.172549 0 0 0 1 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_308_7835"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_308_7835" result="shape"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="shape" result="effect2_innerShadow_308_7835"/>
+        </filter>
+        <radialGradient id="Gradient-0" cx="-2.76" cy="4.52" r="1" fx="-2.76" fy="4.52" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 12.5 -12.5 0 56.5 34.5)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="Gradient-1" cx="-3.57143" cy="5" r="1" fx="-3.57143" fy="5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 3.5 -3.5 0 17.5 12.5)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="Gradient-2" cx="-26" cy="4.33333" r="1" fx="-26" fy="4.33333" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 3 -3 0 13 78)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+</svg>

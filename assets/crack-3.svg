@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Keyshape -->
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="69" viewBox="0 0 89 69" fill="none" style="background: rgba(0,0,0,0.00);">
+    <defs>
+        <radialGradient id="Gradient-0" cx="-1.96" cy="6.12" r="1" fx="-1.96" fy="6.12" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 12.5 -12.5 0 76.5 24.5)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="Gradient-1" cx="-5.28571" cy="3.85714" r="1" fx="-5.28571" fy="3.85714" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 3.5 -3.5 0 13.5 18.5)">
+            <stop offset="0" stop-color="#71eaec"/>
+            <stop offset="1" stop-color="#71eaec" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+    <style>
+@keyframes flex-3_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 49.999%; } 100% { offset-distance: 100%; } }
+@keyframes flex-2_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 50.036%; } 100% { offset-distance: 100%; } }
+@keyframes flex-1_mo { 0% { offset-distance: 0%; } 50% { offset-distance: 50.834%; } 100% { offset-distance: 100%; } }
+    </style>
+    <g id="flex-3" style="transform: translate(-12.5px,-12.5px); animation: 3s linear infinite both flex-3_mo; offset-path: path('M76.5,24.5C74,24.5,74,21.5,76.5,21.5C79,21.5,79,24.5,76.5,24.5'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-0)" rx="12.5" ry="12.5" transform="translate(12.5,12.5)"/>
+        <ellipse fill="#71EAEC" rx="2.5" ry="2.5" transform="translate(12.5,12.5)"/>
+    </g>
+    <ellipse id="flex-2" fill="#71EAEC" rx="0.5" ry="0.5" style="animation: 3s linear infinite both flex-2_mo; offset-path: path('M25.5,61.5C28.8333,60.6023,38.5585,57.7147,41.8919,58.7785C38.6012,59.6592,28.8743,62.3453,25.5,61.5'); offset-rotate: 0deg;"/>
+    <g id="flex-1" style="transform: translate(-3.5px,-3.5px); animation: 3s linear infinite both flex-1_mo; offset-path: path('M13.5,18.5C13.2483,21.3528,14.447,22.8152,17.5,22.5C17.7439,19.5894,16.0778,18.5889,13.5,18.5'); offset-rotate: 0deg;">
+        <ellipse opacity="0.2" fill="url(#Gradient-1)" rx="3.5" ry="3.5" transform="translate(3.5,3.5)"/>
+        <ellipse fill="#71EAEC" rx="0.5" ry="0.5" transform="translate(3.5,3.5)"/>
+    </g>
+</svg>

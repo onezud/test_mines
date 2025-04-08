@@ -42,29 +42,30 @@ body {
 
 .container {
     width: 100%;
-    max-width: 350px;
-    padding: 20px;
+    max-width: 340px; /* Уменьшил для отступов по краям */
+    padding: 15px; /* Отступ от края экраνα */
     box-sizing: border-box;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого */
 }
 
 .button-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    margin: 0 auto 25px;
-    width: 320px; /* Увеличил для симметрии и отступов */
-    height: 320px;
-    /* Цвет заднего фона ячеек */
-    background: #1e2a44; /* Спокойный темно-синий */
-    padding: 15px; /* Одинаковые внутренние отступы */
+    margin: 0 auto 20px;
+    width: 300px; /* Уменьшил для симметрии и мобильных устройств */
+    height: 300px;
+    background: #1e2a44; /* Цвет фона ячеек */
+    padding: 15px;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
-    /* Рамка с закруглениями */
     border: 3px solid #3a5fb3;
     box-shadow: 0 0 15px rgba(58, 95, 179, 0.5);
 }
@@ -72,17 +73,18 @@ body {
 .button-grid.loading::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 20%; /* Узкая линия блика */
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    animation: scan 1.5s ease-in-out infinite; /* Плавная анимация сканера */
+    width: 141.42%; /* Диагональ поля (sqrt(300^2 + 300^2)) */
+    height: 20px; /* Толщина линии */
+    background: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    top: -50%;
+    left: -50%;
+    transform: rotate(45deg); /* Диагональ от верхнего левого к нижнему правому */
+    animation: scanDiagonal 1.5s ease-in-out infinite;
 }
 
-@keyframes scan {
-    0% { left: -100%; }
-    100% { left: 100%; }
+@keyframes scanDiagonal {
+    0% { top: -50%; left: -50%; }
+    100% { top: 100%; left: 100%; }
 }
 
 @keyframes fadeIn {
@@ -91,8 +93,7 @@ body {
 }
 
 .button {
-    /* Цвет ячеек */
-    background: linear-gradient(135deg, #2a3f7a, #1e2a44);
+    background: linear-gradient(135deg, #2a3f7a, #1e2a44); /* Цвет ячеек */
     border: 1px solid #3a5fb3;
     border-radius: 10px;
     width: 100%;
@@ -100,36 +101,41 @@ body {
     position: relative;
     cursor: pointer;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease;
+    overflow: hidden; /* Для корректной анимации */
 }
 
 .button.safe {
-    /* Цвет открытых ячеек */
-    background: linear-gradient(135deg, #ffd700, #f7d02c);
-    border: 1px solid #e6b800;
-    animation: openCell 0.6s ease forwards;
+    background: none; /* Убираем фон для звезды */
+    border: none;
+    animation: shrinkToStar 0.3s ease forwards; /* Уменьшение ячейки */
 }
 
-@keyframes openCell {
-    0% { transform: scale(0.95); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
+@keyframes shrinkToStar {
+    0% { transform: scale(1); }
+    100% { transform: scale(0.1); }
 }
 
 .button::after {
-    /* Цвет звёздочек */
-    content: "★";
-    font-size: 24px;
-    color: #ffffff;
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 0;
+    height: 0;
+    background: url('assets/star.png') no-repeat center/contain; /* Изображение звезды */
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: none;
 }
 
 .button.safe::after {
+    animation: growStar 0.4s ease forwards 0.3s; /* Рост звезды после уменьшения */
     opacity: 1;
+}
+
+@keyframes growStar {
+    0% { width: 10%; height: 10%; }
+    100% { width: 100%; height: 100%; }
 }
 
 .user-info {
@@ -139,6 +145,8 @@ body {
     border-radius: 15px;
     text-align: center;
     font-size: 16px;
+    width: 100%;
+    max-width: 300px; /* Соответствует ширине поля */
 }
 
 .bomb-label {
@@ -156,6 +164,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     width: 100%;
+    max-width: 300px; /* Соответствует ширине поля */
     box-sizing: border-box;
 }
 

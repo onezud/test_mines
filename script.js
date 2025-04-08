@@ -77,12 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Анимация начинается сразу
             buttonGrid.classList.add('loading');
             signalButton.textContent = currentLang.loadingText;
             signalButton.disabled = true;
 
-            const delay = Math.random() * 900 + 100; // Уменьшил задержку (100-1000ms)
+            const delay = Math.random() * 1900 + 100; // Возвращена старая задержка
             setTimeout(() => {
                 placeSafeCells(bombCount);
             }, delay);
@@ -127,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         isNewGame = true;
                     }
                 }
-            }, i * 700); // 700ms на ячейку (0.3s уменьшение + 0.4s рост звезды)
+            }, i * 700); // 700ms на ячейку (0.3s уменьшение + 0.4s рост)
         });
 
         if (typeof Telegram !== 'undefined' && Telegram.WebApp) {

@@ -1,4 +1,3 @@
-// Словарь переводов
 const translations = {
     "ru": {
         bombLabel: "Введите количество ловушек",
@@ -14,9 +13,8 @@ const translations = {
     }
 };
 
-// Функция для установки языка
 function setLanguage() {
-    let userLang = "en"; // Язык по умолчанию
+    let userLang = "en";
     if (typeof Telegram !== 'undefined' && Telegram.WebApp && Telegram.WebApp.initDataUnsafe && Telegram.WebApp.initDataUnsafe.user) {
         userLang = Telegram.WebApp.initDataUnsafe.user.language_code || "en";
     }
@@ -28,9 +26,7 @@ function setLanguage() {
     return translations[lang];
 }
 
-// Оборачиваем весь код в обработчик DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Инициализация Telegram Web App
     if (typeof Telegram !== 'undefined' && Telegram.WebApp) {
         Telegram.WebApp.ready();
     }
@@ -64,9 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateBombDisplay() {
         const amount = document.querySelector('.amount');
-        if (amount) {
-            amount.textContent = `${bombCount} `;
-        }
+        if (amount) amount.textContent = `${bombCount} `;
     }
 
     if (signalButton) {
@@ -75,18 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!buttonGrid) return;
 
             if (isNewGame) {
-                // Очистка поля для новой игры
                 const buttons = Array.from(document.querySelectorAll('.button'));
-                buttons.forEach(button => {
-                    button.classList.remove('bomb', 'safe');
-                });
+                buttons.forEach(button => button.classList.remove('bomb', 'safe'));
                 signalButton.textContent = currentLang.signalButton;
                 buttonGrid.classList.remove('loading');
                 isNewGame = false;
                 return;
             }
 
-            // Запуск анимации ожидания
             buttonGrid.classList.add('loading');
             signalButton.textContent = currentLang.loadingText;
             signalButton.disabled = true;
@@ -105,9 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         buttonGrid.classList.remove('loading');
 
-        buttons.forEach(button => {
-            button.classList.remove('bomb', 'safe');
-        });
+        buttons.forEach(button => button.classList.remove('bomb', 'safe'));
 
         const safeCellsToOpen = getSafeCellsToOpen(count);
         const safeIndices = buttons.map((_, index) => index);
@@ -118,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (safeCellsToShow.length === 0) {
-            // Если нет ячеек для открытия, сразу возвращаем кнопку в исходное состояние
             const signalButton = document.querySelector('.signal-button');
             if (signalButton) {
                 signalButton.textContent = currentLang.signalButton;
@@ -128,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Плавное открытие ячеек по очереди
         safeCellsToShow.forEach((index, i) => {
             setTimeout(() => {
                 buttons[index].classList.add('safe');
@@ -139,10 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         isNewGame = true;
                     }
                 }
-            }, i * 200);
+            }, i * 600); // 600ms на каждую ячейку для плавности
         });
 
-        // Отправка данных в Telegram, если доступно
         if (typeof Telegram !== 'undefined' && Telegram.WebApp) {
             Telegram.WebApp.sendData(`Safe cells shown: ${safeCellsToShow.length}`);
         }

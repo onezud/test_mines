@@ -77,11 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            // Анимация начинается сразу
             buttonGrid.classList.add('loading');
             signalButton.textContent = currentLang.loadingText;
             signalButton.disabled = true;
 
-            const delay = Math.random() * 1900 + 100;
+            const delay = Math.random() * 900 + 100; // Уменьшил задержку (100-1000ms)
             setTimeout(() => {
                 placeSafeCells(bombCount);
             }, delay);
@@ -115,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Плавное открытие ячеек по очереди
         safeCellsToShow.forEach((index, i) => {
             setTimeout(() => {
                 buttons[index].classList.add('safe');
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         isNewGame = true;
                     }
                 }
-            }, i * 600); // 600ms на каждую ячейку для плавности
+            }, i * 700); // 700ms на ячейку (0.3s уменьшение + 0.4s рост звезды)
         });
 
         if (typeof Telegram !== 'undefined' && Telegram.WebApp) {

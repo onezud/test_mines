@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             signalButton.textContent = currentLang.loadingText;
             signalButton.disabled = true;
 
-            const delay = Math.random() * 1900 + 100; // Возвращена старая задержка
+            const delay = Math.random() * 1900 + 100;
             setTimeout(() => {
                 placeSafeCells(bombCount);
             }, delay);
@@ -143,4 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
             default: return 0;
         }
     }
+
+    updateBombDisplay(); // Инициализация начального значения
 });

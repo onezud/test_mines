@@ -71,12 +71,54 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
     margin-bottom: 25px;
+    width: 300px; /* Строго квадратное поле */
+    height: 300px; /* Строго квадратное поле */
+    background: #0a1a3d; /* Монотонный темно-синий фон */
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
-    background: rgba(20, 27, 47, 0.8);
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #3a5fb3;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.button-grid::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #3a5fb3, #0f8ae4, #3a5fb3);
+    background-size: 200% 200%;
+    animation: borderGlow 3s linear infinite;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+@keyframes borderGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.button-grid.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.5) 50%, transparent 60%);
+    background-size: 200% 200%;
+    animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% -200%; }
+    100% { background-position: 200% 200%; }
 }
 
 @keyframes fadeIn {
@@ -88,18 +130,25 @@ body {
     background: linear-gradient(45deg, #1e3c72, #2a5298);
     border: 1px solid #3a5fb3;
     border-radius: 8px;
-    height: 60px;
+    width: 100%; /* Квадратные ячейки */
+    padding-top: 100%; /* Соотношение 1:1 для квадрата */
+    position: relative;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .button.safe {
-    transform: rotateY(180deg);
     background: #f7d02c;
     border: 1px solid #e6b800;
+    animation: shrinkAndGrow 0.6s ease forwards;
+}
+
+@keyframes shrinkAndGrow {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(0.1); opacity: 0; }
+    51% { transform: scale(0.1); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .button::after {
@@ -109,9 +158,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateY(180deg);
+    transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
 }
 
 .button.safe::after {
